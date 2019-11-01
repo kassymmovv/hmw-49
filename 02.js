@@ -1,10 +1,12 @@
 var figlet = require('figlet');
-
-figlet('Hello World!!', function(err, data) {
+const mess = process.argv[2];
+figlet.text(mess, function(err, data) {
     if (err) {
-        console.log('Something went wrong...');
+
         console.dir(err);
-        return;
+
+    }else {
+        console.log(data)
     }
-    console.log(data)
+
 });
